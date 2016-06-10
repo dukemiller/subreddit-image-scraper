@@ -12,6 +12,13 @@ def make_folder(path: str) -> str:
     return path
 
 
+def get_url_filename(url: str) -> str:
+    """ Returns the filename from a url if there are no slashes in the name.
+    e.g. 'http://google.com/{file.png}' """
+
+    return url.split('/')[-1]
+
+
 def print_arguments_and_exit(error_message: str = None) -> None:
     if error_message is not None:
         print(error_message)
