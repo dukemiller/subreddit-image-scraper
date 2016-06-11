@@ -34,6 +34,8 @@ def get_download_data_for(url: str) -> Iterable[str]:
 
 
 def download(url: str, output_path: str) -> bool:
+    """ Download the url to the output path, returning if it was successful. """
+
     download_path = path.join(output_path, tools.get_url_filename(url))
 
     if not path.exists(download_path):
@@ -61,8 +63,7 @@ def download(url: str, output_path: str) -> bool:
 
 
 def main():
-    count = tools.get_count()
-    subreddits = tools.get_subreddits()
+    count, subreddits = tools.get_arguments()
     output_path = tools.make_folder(tools.OUTPUT_FOLDER)
     reddit = praw.Reddit(user_agent="subreddit-image-scraper by /u/dukemiller")
     data = DataWriter(output_path)
