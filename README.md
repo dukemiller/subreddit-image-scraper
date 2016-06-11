@@ -13,7 +13,7 @@ Download the top 20 pictures from /r/scorpion, /r/astrophotography, and /r/birdp
   
 **OR**  
   
-**interactive --  
+**interactive --**  
 ``python {main.py}``  
 Prompts will come up for the same arguments as the commandline to be filled out in exactly the same way.
 
