@@ -97,7 +97,7 @@ def get_arguments() -> Tuple[int, List[str]]:
             print_arguments_and_exit("Invalid argument in position 1.")
 
         # Format second argument
-        subreddits = get_subreddits("".join(args[2:]))
+        subreddits = get_subreddits(" ".join(args[2:]))
 
     # Given nothing
     else:
